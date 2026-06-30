@@ -5,6 +5,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 // Screens
 import LoginScreen from '../screens/LoginScreen';
+import SignUpScreen from '../screens/SignUpScreen';
 import DashboardWargaScreen from '../screens/DashboardWargaScreen';
 import DashboardAdminScreen from '../screens/DashboardAdminScreen';
 import FinanceScreen from '../screens/FinanceScreen';
@@ -83,19 +84,11 @@ function WargaTabs() {
   );
 }
 
-// Dummy screen to choose role
-function RoleSelector({ navigation }) {
-    return (
-        <Stack.Navigator screenOptions={{ headerShown: false }}>
-           <Stack.Screen name="Login" component={LoginScreen} />
-        </Stack.Navigator>
-    )
-}
-
 export default function AppNavigator() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Login">
       <Stack.Screen name="Login" component={LoginScreen} />
+      <Stack.Screen name="SignUp" component={SignUpScreen} />
 
       {/* We are routing to AdminTabs here for demonstration purposes, to allow navigating to admin specific screens */}
       {/* In a real app, logic would determine whether to show WargaTabs or AdminTabs based on auth role */}

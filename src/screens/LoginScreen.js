@@ -60,7 +60,7 @@ const LoginScreen = ({ navigation }) => {
 
         <View style={styles.registerContainer}>
             <Text style={styles.registerText}>Belum punya akun? </Text>
-            <TouchableOpacity onPress={() => {}}>
+            <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
                 <Text style={styles.registerLink}>Daftar</Text>
             </TouchableOpacity>
         </View>
